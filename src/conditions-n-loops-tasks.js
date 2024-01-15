@@ -164,8 +164,92 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  const numArray = [
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '.',
+    ',',
+    '-',
+  ];
+  const stringArray = [
+    'zero',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+    'point',
+    'point',
+    'minus',
+  ];
+
+  const numberStrArray = numberStr;
+  let newArr = '';
+
+  for (let i = 0; i < numberStrArray.length; i += 1) {
+    const currentNumber = numberStrArray[i];
+
+    if (i !== 0) newArr += ' ';
+
+    switch (currentNumber) {
+      case numArray[0]:
+        newArr += stringArray[0];
+        break;
+      case numArray[1]:
+        newArr += stringArray[1];
+        break;
+      case numArray[2]:
+        newArr += stringArray[2];
+        break;
+      case numArray[3]:
+        newArr += stringArray[3];
+        break;
+      case numArray[4]:
+        newArr += stringArray[4];
+        break;
+      case numArray[5]:
+        newArr += stringArray[5];
+        break;
+      case numArray[6]:
+        newArr += stringArray[6];
+        break;
+      case numArray[7]:
+        newArr += stringArray[7];
+        break;
+      case numArray[8]:
+        newArr += stringArray[8];
+        break;
+      case numArray[9]:
+        newArr += stringArray[9];
+        break;
+      case numArray[10]:
+        newArr += stringArray[10];
+        break;
+      case numArray[11]:
+        newArr += stringArray[11];
+        break;
+      case numArray[12]:
+        newArr += stringArray[12];
+        break;
+      default:
+        break;
+    }
+  }
+
+  return newArr;
 }
 
 /**
